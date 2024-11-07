@@ -1,0 +1,10 @@
+#Dockerfile for Ubuntu Server:
+
+
+FROM ubuntu:latest
+
+RUN apt update && apt install -y openssh-server iptables syslog-ng
+
+EXPOSE 22
+
+CMD ["/usr/sbin/sshd"]

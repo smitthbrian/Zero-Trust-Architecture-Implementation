@@ -1,0 +1,5 @@
+#Syslog-ng Configuration:
+
+filter f_ssh { facility(auth, authpriv); };
+destination d_ssh { file("/var/log/ssh.log"); };
+log { source(src); filter(f_ssh); destination(d_ssh); };
